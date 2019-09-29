@@ -155,7 +155,7 @@ input[type="button"], input[type="submit"], button {
     width: 100%;
     margin: 0;
     padding: 0;
-    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://html5up.net/uploads/demos/spectral/images/banner.jpg);
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/img/banner.jpg);
     word-break: break-all;
     background-attachment: fixed;
     background-position: center center;

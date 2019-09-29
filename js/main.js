@@ -18,6 +18,4 @@ class Main { // Create class Main
     const app = new Main('BLOG');
     app.render;
 
-    document.getElementById('sub').onclick = () => alert('Отправлено!');
-
 })();

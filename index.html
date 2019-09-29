@@ -85,12 +85,12 @@
                     </p>
                 </div>
                 <div class="flex-2">
-                    <img src="https://html5up.net/uploads/demos/spectral/images/pic01.jpg" alt="">
+                    <img src="/img/pic01.jpg" alt="">
                     <h1>Lorem ipsum</h1>
                     <p>Wendy describes her works as a perfect mess of vivid colors and an imperfect combination of lines and shapes. </p>
                 </div>
                 <div class="flex-3">
-                        <img src="https://html5up.net/uploads/demos/spectral/images/pic01.jpg" alt="">
+                        <img src="/img/pic01.jpg" alt="">
                         <h1>Lorem ipsum</h1>
                         <p>WJ's NY office tells more about the designer than words can. All clients and friends agree that it's just so Wendy. </p>
                 </div>
@@ -175,7 +175,36 @@
 <script src="js/main.js"></script>
 <!-- jQuery function -->
 <script>
-    (function () {
+(function ($) {
+
+    jQuery(function () {
+
+        $('#sub').on('click', function (event) {
+            event.preventDefault();
+
+            let name = $('#name').val();
+            let text = $('#text').val();
+
+            if (!name) {
+                alert('Введите имя!');
+                $('#name').css({
+                    'borderColor': 'red'
+                });
+            } else if (!text) {
+                alert('Введите сообщение!');
+                $('#text').css({
+                    'borderColor': 'red'
+                });
+            } else {
+                alert('Спасибо, cообщение отправлено!')
+                $('#name').css({
+                    'borderColor': 'white'
+                });
+                $('#text').css({
+                    'borderColor': 'white'
+                });
+            }
+        });
 
         $('.menu__bth').on('click', function (event) {
             event.preventDefault();
@@ -190,7 +219,7 @@
         });
 
         // Scroll to start page
-        $('#arrow').on('click', () => {
+        $('#arrow').on('click', function () {
             $('html, body').animate({
                 scrollTop: 0
             }, 500);
@@ -206,7 +235,9 @@
             }, 800);
         });
 
-    })(jQuery);
+    });
+
+})(window.jQuery, document, window);
 </script>
 </body>
 </html>

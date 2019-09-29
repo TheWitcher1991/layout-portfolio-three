@@ -1,11 +1,24 @@
 {
-  "name": "app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "js/main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Ashot Kot",
-  "license": "MIT"
-}
+    "name": "blog",
+    "version": "1.0.0",
+    "main": "js/main.js",
+    "private": true,
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/TheWitcher1991/ayout-portfolio-three.git"
+    },
+    "author": "Ashot Svazyan <ashot.svazyan222@gmail.com>",
+    "license": "MIT",
+    "current": {
+      "os": "win32",
+      "arch": "x64"
+    },
+    "devEngines": {
+      "node": ">= 10.x",
+      "npm": ">= 6.x",
+      "yarn": ">= 1.15.2"
+    }
+  }
