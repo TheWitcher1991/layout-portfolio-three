@@ -1,0 +1,44 @@
+# Apache Server Configs v3.1.0 | MIT License
+# https://github.com/h5bp/server-configs-apache
+
+# (!) Using `.htaccess` files slows down Apache, therefore, if you have
+# access to the main server configuration file (which is usually called
+# `httpd.conf`), you should add this logic there.
+#
+# https://httpd.apache.org/docs/current/howto/htaccess.html
+
+# ######################################################################
+# # CROSS-ORIGIN                                                       #
+# ######################################################################
+
+# ----------------------------------------------------------------------
+# | Cross-origin requests                                              |
+# ----------------------------------------------------------------------
+
+# Allow cross-origin requests.
+#
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
+# https://enable-cors.org/
+# https://www.w3.org/TR/cors/
+
+# <IfModule mod_headers.c>
+#     Header set Access-Control-Allow-Origin "*"
+# </IfModule>
+
+# ----------------------------------------------------------------------
+# | Cross-origin images                                                |
+# ----------------------------------------------------------------------
+
+# Send the CORS header for images when browsers request it.
+#
+# https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image
+# https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html
+
+<IfModule mod_setenvif.c>
+    <IfModule mod_headers.c>
+        <FilesMatch "\.(bmp|cur|gif|ico|jpe?g|png|svgz?|webp)$">
+            SetEnvIf Origin ":" IS_CORS
+            Header set Access-Control-Allow-Origin "*" env=IS_CORS
+        </FilesMatch>
+    </IfModule>
+</IfModule>

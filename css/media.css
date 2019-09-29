@@ -1,0 +1,36 @@
+/* 8. MEDIA */
+/* ============================================================================================================== */
+/* before 1440px */
+@media all and (min-width: 1440px) {
+
+}
+
+/* after 1440px */
+@media all and (max-width: 1440px) {
+
+}
+
+/* after 1278px */
+@media all and (max-width: 1270px) {
+
+}
+
+/* after 1024px */
+@media all and (max-width: 1024px) {
+
+}
+
+/* after 768px */
+@media all and (max-width: 768px) {
+
+}
+
+/* after 425px */
+@media all and (max-width: 425px) {
+
+}
+
+/* after 320px */
+@media all and (max-width: 320px) {
+
+}
